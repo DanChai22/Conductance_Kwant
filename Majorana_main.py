@@ -184,8 +184,8 @@ def postprocess_S(S_raw):
         if S is not None:
             keys=S.keys()
             break
-    else:
-        return None
+       else:
+           return None
     if len(S_raw) == args.x_num * args.y_num:
         return {lead_pos:np.array([S[lead_pos] for S in S_raw]).reshape((args.x_num,args.y_num)) for lead_pos in keys} if args.conductance else None
     else:        
